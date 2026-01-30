@@ -1,15 +1,15 @@
-export const range = (start: number, end: number, step = 1) : Array<number> => {
+export const range = (start: number, end?: number, step = 1) : Array<number> => {
+
+      const output = []
 
     if(typeof end === "undefined"){
-        start = 0
         end = start
+        start = 0
     }
 
-   const outputs = []
+    for(let i = start; i <= end; i += step){
+        output.push(i)
+    }
 
-   for(let i = start; i < end; i += step){
-      outputs.push(i)
-   }
-
-   return outputs
+    return output
 }
