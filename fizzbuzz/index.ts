@@ -1,4 +1,4 @@
-const Fizzbuzz = (n: number) : number | string => {
+const Fizzbuzz = (n: number) : string => {
     if(typeof n !== "number"){
         throw new Error("Not a number")
     }
