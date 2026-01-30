@@ -1,20 +1,25 @@
-const fizzbuzz = (n: number) : number | string => {
+const Fizzbuzz = (n: number) : number | string => {
     if(typeof n !== "number"){
         throw new Error("Not a number")
     }
+
+    const divisibleByThree = n % 3 === 0
+    const divisibleByFive = n % 5 === 0
    
 
-    if(n % 3 === 0){
-        return "fizz"
-    }
-    else if(n % 5 === 0){
-        return "buzz"
-    }
-    else if(n % 3 === 0 && n % 5 === 0){
+    if(divisibleByThree && divisibleByFive){
         return "fizzbuzz"
     }
+    else if(divisibleByThree){
+        return "fizz"
+    }
+    else if(divisibleByFive){
+        return "buzz"
+    }
+    else{
+        return "undefined"
+    }
 
-
-    return n
 }
-fizzbuzz(5)
+
+console.log(Fizzbuzz(10))
