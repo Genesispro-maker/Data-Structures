@@ -1,3 +1,3 @@
-const SmallestMultiple = (start: number, end: number) => {
-
+const SmallestMultiple = (start: number, end: number) : number | string => {
+   
 }
