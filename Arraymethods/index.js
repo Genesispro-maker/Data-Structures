@@ -24,6 +24,7 @@ names.GenesisforEach((name) => {
 })
 
 const numbers = [1, 2, 3, 5]
-numbers.GenesisMap((num) => {
-    console.log(num)
+numbers.GenesisMap((num, index) => {
+    console.log(num * 2)
+    console.log("this is my index", index)
 })
