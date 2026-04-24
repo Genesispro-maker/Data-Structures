@@ -10,7 +10,7 @@ Array.prototype.GenesisMap = function(callback){
 
 //custom forEach
 Array.prototype.GenesisforEach =  function(callback){
-    for(let i = 0; i < this.length; i++){
+    for(let i = 0; i <= this.length; i++){
         callback(this[i], i, this)
     }
 }
@@ -28,3 +28,16 @@ numbers.GenesisMap((num, index) => {
     console.log(num * 2)
     console.log("this is my index", index)
 })
+
+
+let a = 5
+let b = 3
+
+
+console.log("value", a >>> 1)
+console.log(8 ^ 9)
+
+console.log(11 | 12)
+console.log(5 << 2)
+
+console.log(8 >>> 3)

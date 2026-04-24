@@ -4,6 +4,7 @@ var Fizzbuzz = function (n) {
     }
     var divisibleByThree = n % 3 === 0;
     var divisibleByFive = n % 5 === 0;
+    
     if (divisibleByThree && divisibleByFive) {
         return "fizzbuzz";
     }

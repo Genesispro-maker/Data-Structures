@@ -1,6 +1,6 @@
  const range = (start, end, step = 1) => {
 
-      const output = []
+    const output = []
 
     if(typeof end === "undefined"){
         end = start

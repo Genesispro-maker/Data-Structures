@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Filter Example</title>
+</head>
+<body>
+
+<h3>Filter</h3>
+
+<label>
+  <input type="checkbox" value="cloth"> Cloth
+</label>
+
+<label>
+  <input type="checkbox" value="shoe"> Shoe
+</label>
+
+<label>
+  <input type="checkbox" value="wear"> Wear
+</label>
+
+<hr>
+
+<div id="items">
+  <div data-name="cloth">this is a cloth</div>
+  <div data-name="shoe">this is a shoe</div>
+  <div data-name="wear">this is a wear</div>
+</div>
+
+<script>
+
+const checkboxes = document.querySelectorAll("input[type='checkbox']");
+const items = document.querySelectorAll("#items div");
+
+checkboxes.forEach(cb => {
+  cb.addEventListener("change", filterItems);
+});
+
+function filterItems() {
+
+  const checked = Array.from(checkboxes)
+    .filter(cb => cb.checked)
+    .map(cb => cb.value);
+
+  items.forEach(item => {
+
+    const category = item.dataset.name;
+
+    if (checked.length === 0 || checked.includes(category)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+
+  });
+
+}
+
+</script>
+
+</body>
+</html>
